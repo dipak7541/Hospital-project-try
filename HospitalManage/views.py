@@ -9,11 +9,12 @@ def public_user_page(request):
 def user_registration_details(request):
     form = UserRegistrationForm()
     if request.method=="POST":
-        form=UserRegistrationForm(request.POST)
+        form = UserRegistrationForm(request.POST or None)
         if form.is_valid():
-            form.save()
-            print('success')
-            return redirect('/')
+            if form.password==form.conformpass:
+                UserRegistration.objects.create(**form.cleaned_data)
+            else:
+                raiseValidationerror
         else:
             print('error')
     context= {

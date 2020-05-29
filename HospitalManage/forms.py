@@ -8,7 +8,7 @@ class UserRegistrationForm(forms.ModelForm):
         widgets = {
         'address':forms.Textarea(attrs={'rows':2, 'cols':50}),
         'password': forms.PasswordInput(),
-        'confrompass':forms.PasswordInput(),
+        'conformpass': forms.PasswordInput(),
          }
 
 
