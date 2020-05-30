@@ -15,5 +15,5 @@ class UserRegistration(models.Model):
     address=models.TextField()
     bloodgroup=models.CharField(max_length=5)
     password=models.CharField(max_length=32)
-    conformpass=models.CharField(max_length=15)    
+    conformpassword=models.CharField(max_length=15)    
     

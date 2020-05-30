@@ -7,8 +7,8 @@ class UserRegistrationForm(forms.ModelForm):
         fields= '__all__'
         widgets = {
         'address':forms.Textarea(attrs={'rows':2, 'cols':50}),
-        'password': forms.PasswordInput(),
-        'conformpass': forms.PasswordInput(),
+        'password':forms.TextInput(attrs={'type' : 'password'}),
+        'conformpassword': forms.TextInput(attrs={'type' : 'password'}),
          }
 
 
