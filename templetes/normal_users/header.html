@@ -73,7 +73,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-6 col-lg-7 ml-auto">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
@@ -81,8 +81,8 @@
                                         <li><a href="{% static 'index.html'%}">Department</a></li>
                                         <li><a href="{% static 'index.html'%}">Doctors</a></li>
                                         <li><a href="{% static 'index.html'%}">Contact</a></li>
-                                        <li><a>Hi {{firstname}}</a></li>
-                                        <li><a href="{% url 'index' %}">Logout</a></li>
+                                        <li><a href="register_user">Sign In</a></li>
+                                        <li><a href="login_user">Log In</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -95,11 +95,9 @@
             </div>
         </div>
     </header>
-
     {% block content %}
 
-    {% endblock content %}
-       <!-- JS here -->
+    {% endblock %}
     <script src="{% static 'js/vendor/modernizr-3.5.0.min.js'%}"></script>
     <script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
     <script src="{% static 'js/popper.min.js'%}"></script>
@@ -145,5 +143,4 @@
 });
 </script>
 </body>
-   
 </html>

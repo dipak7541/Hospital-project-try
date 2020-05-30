@@ -36,6 +36,6 @@ class UserRegistrationForm(forms.ModelForm):
  
 
 class loginForm(forms.Form):
-    username=forms.charfeild(max_length=32)
+    username=forms.CharField(max_length=32)
     password=forms.CharField(max_length=32,widget=forms.TextInput(attrs={'type' : 'password'}))
                
