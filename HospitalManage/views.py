@@ -12,12 +12,7 @@ def user_registration_details(request):
     if request.method=="POST":
         form = UserRegistrationForm(request.POST or None)
         if form.is_valid():
-            if (form.cleaned_data['password']==form.cleaned_data['conformpassword']):
                 UserRegistration.objects.create(**form.cleaned_data)
-            else:
-                raise forms.ValidationError("password doesnot match")    
-        else:
-            print('error')
     context= {
         'form':form
     }
